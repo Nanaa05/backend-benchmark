@@ -52,7 +52,7 @@ async fn main() -> std::io::Result<()> {
         .at("/json", get(json))
         .at("/echo", post(echo));
 
-    Server::new(TcpListener::bind("127.0.0.1:8080"))
+    Server::new(TcpListener::bind("0.0.0.0:8080"))
         .run(app)
         .await
 }

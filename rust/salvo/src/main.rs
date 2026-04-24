@@ -61,7 +61,7 @@ async fn main() {
         .push(Router::with_path("json").get(json))
         .push(Router::with_path("echo").post(echo));
 
-    let acceptor = TcpListener::new("127.0.0.1:8080").bind().await;
+    let acceptor = TcpListener::new("0.0.0.0:8080").bind().await;
 
     Server::new(acceptor).serve(router).await;
 }

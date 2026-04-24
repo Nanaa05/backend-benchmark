@@ -3,7 +3,7 @@
 use bytes::Bytes;
 use http_body_util::{BodyExt, Full};
 use hyper::{
-    Method, Request, Response, StatusCode, body::Incoming, server::conn::http1, service::service_fn,
+1    Method, Request, Response, StatusCode, body::Incoming, server::conn::http1, service::service_fn,
 };
 use hyper_util::rt::TokioIo;
 use serde::{Deserialize, Serialize};
@@ -90,7 +90,7 @@ async fn handler(req: Request<Incoming>) -> Result<Response<Full<Bytes>>, Infall
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 8080));
     let listener = TcpListener::bind(addr).await?;
     println!("Listening on http://{}", addr);
 
