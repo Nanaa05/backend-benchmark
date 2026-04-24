@@ -1,0 +1,8 @@
+[package]
+name = "rocket-bench"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rocket = { workspace = true }
+serde = { workspace = true }

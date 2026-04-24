@@ -1,0 +1,9 @@
+[package]
+name = "actix-bench"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+actix-web = { workspace = true }
+serde = { workspace = true }
+

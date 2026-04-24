@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Node / TypeScript build output
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Go build output
+*.exe
+*.test
+*.out
+bin/
+
+# Rust build output
+target/
+
+# Benchmark results
+bench-results/
+results/
+*.csv
+*.log
+
+# Docker / local env
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+.\#*
+.emacs.desktop
+.emacs.desktop.lock
+.elc
+auto-save-list/
+tramp
+.\#*

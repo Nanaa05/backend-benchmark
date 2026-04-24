@@ -1,0 +1,40 @@
+[workspace]
+resolver = "3"
+members = [
+  "actix",
+  "axum",
+  "rocket",
+  "salvo",
+  "warp",
+  "hyper", "poem",
+]
+
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+rust-version = "1.85"
+
+[workspace.dependencies]
+# Core
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.49", features = ["full"] }
+
+# Frameworks
+actix-web = "4"
+axum = "0.8.8"
+warp = { version = "0.4.2", features = ["server"] }
+rocket = { version = "0.5.1", features = ["json"] }
+salvo = "0.75"
+hyper = { version = "1", features = ["full"] }
+http-body-util = "0.1"
+hyper-util = { version = "0.1", features = ["full"] }
+bytes = "1"
+serde_json = "1"
+poem = { version = "3.1.12", features = ["server"] }
+
+# Optional (used by salvo)
+tracing = "0.1"
+tracing-subscriber = "0.3"
+

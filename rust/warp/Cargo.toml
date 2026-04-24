@@ -1,0 +1,9 @@
+[package]
+name = "warp-bench"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+warp = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }

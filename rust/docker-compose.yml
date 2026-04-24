@@ -1,0 +1,10 @@
+services:
+  rust-web-bench:
+    build: .
+    container_name: rust-web-bench
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    volumes:
+      - ./bench-results:/app/results

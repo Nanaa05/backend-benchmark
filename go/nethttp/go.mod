@@ -1,0 +1,3 @@
+module nethttp-bench
+
+go 1.25.6
